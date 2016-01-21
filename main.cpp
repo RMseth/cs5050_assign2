@@ -19,15 +19,15 @@ bool winRecursive(int a, int b, int c){
   if((a==0 && b==0) || (a==0 && c==0) || (b==0 && c==0)){
     return true;
   }
-    for(int i = 0; i < a; ++i ){
+    for(int i = 1; i < a+1; ++i ){
         return (!winRecursive(i-1, b, c));
     }
 
-    for(int j = 0; j < b; ++j ){
+    for(int j = 1; j < b+1; ++j ){
         return (!winRecursive(a, j-1, c));
     }
 
-    for(int k = 0; k < c; ++k ){
+    for(int k = 1; k < c+1; ++k ){
         return (!winRecursive(a, b, k-1));
     }
 }
